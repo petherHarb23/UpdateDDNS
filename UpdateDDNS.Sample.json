@@ -1,0 +1,9 @@
+{
+  "DNSOUsername": "SampleUsername",
+  "DNSOHostname": "all.dnsomatic.com",
+  "DNSOPassword": "01000000...",
+  "StoredIp": "0.0.0.0",
+  "NameCheapDomainName": "example.com",
+  "NameCheapHostname": "subdomain",
+  "NameCheapPassword": "01000000...s"
+}
