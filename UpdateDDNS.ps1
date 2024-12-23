@@ -96,6 +96,9 @@ try {
 	}
 	Add-LogMessage "==============================================="
 	Add-LogMessage "Starting Dynamic DNS Update Client"
+	if ($Force) {
+		Add-LogMessage "-Force option applied."
+	}
 
 	# Check if a config file exists.
 	Add-LogMessage "Looking for a configuration file: $ConfigFile"
