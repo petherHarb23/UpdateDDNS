@@ -83,8 +83,16 @@ function Update-ObjectMember {
 $LogFile = Join-Path -Path $(Split-Path $PSCommandPath) -ChildPath "$((Get-Item $PSCommandPath).BaseName).log"
 # Limit to Trim large log file
 $LogFileMaxLines = 10000
-# URI to get public IP from
-$PublicIPURI = 'http://myip.dnsomatic.com/'
+# Create an array of public IP URIs
+$PublicIPURIs = @(
+	'http://myip.dnsomatic.com/',
+	'http://checkip.amazonaws.com/',
+	'http://icanhazip.com/',
+	'http://ipecho.net/plain',
+	'http://ident.me'
+)
+# Choose one at random
+$PublicIPURI = $PublicIPURIs | Get-Random
 
 try {
 	if ($UpdatePassword) {
